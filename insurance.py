@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
+!pip install streamlit pandas scikit-learn
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
 nav = st.sidebar.radio("Navigation",["About","Predict"])
-df = pd.read_csv('insurance.csv')
+df = pd.read_csv('https://github.com/Mohsenselseleh/Insurance2/blob/main/insurance.csv')
 
 if nav=="About":
     st.title("Health Insurance Premium Predictor")
